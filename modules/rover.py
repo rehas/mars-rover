@@ -12,7 +12,6 @@ class Rover():
     self.commands = None
     self.compass = ["N", "E", "S", "W"]
 
-    print("This initializes a Rover class")
   def get_commands(self, commands):
     print(f"I'm rover at {self.locx}, {self.locy}")
     print(f"I've got commands {commands}")
@@ -27,7 +26,6 @@ class Rover():
     print(f"Executed commands {self.commands}")
 
   def execute_single_command(self, single_command):
-    # TODO: test me
     if single_command == "L":
       direction_index = self.compass.index(self.direction) - 1
       direction_index = direction_index if direction_index > -1 else direction_index + 4
@@ -42,15 +40,18 @@ class Rover():
       self.locx = target_posx
       self.locy = target_posy
       self.grid.update_location(self, cur_posx, cur_posy)
-      
-
 
   def is_command_valid(self, command):
-    # TODO: test me
     if command in ["R", "L"]:
       return True
     else:
-      return  self.do_i_stay_in_grid() and self.is_path_clear()
+      do_i_stay_in_grid = self.do_i_stay_in_grid()
+      if not do_i_stay_in_grid:
+        print("Fall detected")
+      is_path_clear = self.is_path_clear()
+      if not is_path_clear:
+        print("Collision detected")
+      return  do_i_stay_in_grid and is_path_clear
 
   def calculate_next_position_on_move(self):
     if self.direction == "N":
