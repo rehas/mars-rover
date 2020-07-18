@@ -4,9 +4,27 @@ TaskList For Mars Rover
 - Map out the goals
 	+	Describe flow and assumptions
 	- Create sub-steps
+		
 		- Figure out test cases
-	- Decsribe separate parts and responsibilities
-
+			- Try commanding a rover out of the grid
+			- Try commanding a rover to crash into another one
+			- Try sending jumbled commands
+	- Describe separate parts and responsibilities
+		- A remote sattelite that is responsible for:
+			- Receiving the batch commands
+			- Parsing and validating commands
+			- Communicating the commands to the rovers down on the surface
+			- Receiving the results of the commands
+			- Communicating results back to the sender
+		- A rover that is responsible for:
+			- Executing the given commands
+			- Evaluating if the command is executable
+				- By checking grid edges
+				- By checking if there are other rovers on the way
+				- Sending the execution results back to the sattelite
+		- Grid 
+			- Holding updated information about the locations of the rovers and the edges
+		- A comms decoder to display the recieved updates on the grid
 -----
 
 - FLOW:
@@ -16,6 +34,8 @@ TaskList For Mars Rover
 			- CommandsPerRover
 				- Initial position of the rover on the grid -> 1 2 N : Rover is on location (x,y) 1,2 and facing North
 					- This information is verified by another department so we will assume it is correct
+					- (0,0) means the cell at top left corner
+					- (3,4) means 3rd row, 4th column (with 0 based index)
 				- Action commands -> LML -> turn Left - Move - turn Left 
 					- Move means move 1 square on the grid towards the direction currently faced. 
 					- Left / Right means -> counter clockwise and clockwise respectively when you're looking at the compass.
@@ -43,7 +63,20 @@ TaskList For Mars Rover
 			- The locations of the rovers could be different than previous batch
 	- We assume that the rovers cover 1 square size on grid completely filling it
 
+-----
 
+- Phase1
+	- Build the grid
+		+ Grid class
+		+ init with sizes
+		+ display self 
+		- update with new locations of rovers on
+		+ is desired location available
+	- Build the satellite
+	- Build the rover
+
+
+-----
 - PreDelivery Checks
 	- ReadMe contains steps to install
 	- Try install from scratch and run
