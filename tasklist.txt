@@ -35,7 +35,7 @@ TaskList For Mars Rover
 				- Initial position of the rover on the grid -> 1 2 N : Rover is on location (x,y) 1,2 and facing North
 					- This information is verified by another department so we will assume it is correct
 					- (0,0) means the cell at top left corner
-					- (3,4) means 3rd row, 4th column (with 0 based index)
+					- (3,4) means 4th row, 3rd column (with 0 based index)
 				- Action commands -> LML -> turn Left - Move - turn Left 
 					- Move means move 1 square on the grid towards the direction currently faced. 
 					- Left / Right means -> counter clockwise and clockwise respectively when you're looking at the compass.
@@ -86,7 +86,17 @@ TaskList For Mars Rover
 		+ initialize with location
 		+ send commands
 		+ set print method to display on grid
-		HERE=> Parse movement commands
+		+ Parse movement commands
+		+ Caluclate next position
+		+ If available
+			+ Update position for rover
+	- Validate commandfile
+	- Return result as file
+	HERE=> Test cases
+		- Unit tests for functions
+		- Validation cases
+	+ Run both from vscode and cli
+		+ Set paths
 
 
 -----
