@@ -92,9 +92,9 @@ TaskList For Mars Rover
 			+ Update position for rover
 	- Validate commandfile
 	- Return result as file
-	HERE=> Test cases
-		- Unit tests for functions
-		- Validation cases
+	+ Test cases
+		+ Unit tests for functions
+		+ Validation cases
 	+ Run both from vscode and cli
 		+ Set paths
 
