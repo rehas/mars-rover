@@ -33,6 +33,6 @@ class Grid():
       raise Exception(f"Rover insertion failed for : {rover.locx},{rover.locy}")
 
   def is_location_available(self, locx: int, locy: int):
-    print(f"availability checking locations locx:{locx} , locy:{locy} ")
-    print(f" width: {self.width} , length {self.length}")
+    # print(f"availability checking locations locx:{locx} , locy:{locy} ")
+    # print(f" width: {self.width} , length {self.length}")
     return locx < self.width and locy < self.length and not self.grid[locy][locx]
