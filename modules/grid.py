@@ -1,6 +1,7 @@
 '''
   Grid Module
 '''
+# from modules.rover import Rover
 from pprint import pprint
 class Grid():
   def __init__(self, width: int, length: int):
@@ -19,13 +20,21 @@ class Grid():
   def display(self):
     pprint(self.grid)
 
-  def insert_rover(self, locx: int, locy: int, direction: str):
+  # def insert_rover(self, locx: int, locy: int, direction: str):
+  #   # Assumes initial locations are valid
+  #   if self.is_location_available(locx, locy):
+  #     self.grid[locx][locy] = direction
+  #   else:
+  #     # TODO:# log or throw exception
+  #     raise Exception(f"Rover insertion failed for : {locx},{locy}")
+  
+  def insert_rover(self, rover):
     # Assumes initial locations are valid
-    if self.is_location_available(locx, locy):
-      self.grid[locx][locy] = direction
+    if self.is_location_available(rover.locx, rover.locy):
+      self.grid[rover.locx][rover.locy] = rover
     else:
       # TODO:# log or throw exception
-      raise Exception(f"Rover insertion failed for : {locx},{locy}")
+      raise Exception(f"Rover insertion failed for : {rover.locx},{rover.locy}")
 
   def is_location_available(self, locx: int, locy: int):
     return locx < self.width and locy < self.length and not self.grid[locx][locy] 
