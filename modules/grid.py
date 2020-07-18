@@ -20,21 +20,19 @@ class Grid():
   def display(self):
     pprint(self.grid)
 
-  # def insert_rover(self, locx: int, locy: int, direction: str):
-  #   # Assumes initial locations are valid
-  #   if self.is_location_available(locx, locy):
-  #     self.grid[locx][locy] = direction
-  #   else:
-  #     # TODO:# log or throw exception
-  #     raise Exception(f"Rover insertion failed for : {locx},{locy}")
+  def update_location(self, rover, old_locx, old_locy):
+    self.grid[old_locy][old_locx] = 0
+    self.insert_rover(rover)
   
   def insert_rover(self, rover):
     # Assumes initial locations are valid
     if self.is_location_available(rover.locx, rover.locy):
-      self.grid[rover.locx][rover.locy] = rover
+      self.grid[rover.locy][rover.locx] = rover
     else:
       # TODO:# log or throw exception
       raise Exception(f"Rover insertion failed for : {rover.locx},{rover.locy}")
 
   def is_location_available(self, locx: int, locy: int):
-    return locx < self.width and locy < self.length and not self.grid[locx][locy] 
+    print(f"availability checking locations locx:{locx} , locy:{locy} ")
+    print(f" width: {self.width} , length {self.length}")
+    return locx < self.width and locy < self.length and not self.grid[locy][locx]
