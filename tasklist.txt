@@ -72,7 +72,15 @@ TaskList For Mars Rover
 		+ display self 
 		- update with new locations of rovers on
 		+ is desired location available
-	- Build the satellite
+	HERE=> Build the satellite
+		+ receive commands from file
+		- decide if command receiving should happen upon init or later
+		- parse commands
+		- initalize grid
+		- place rovers on grid
+		- send rovers messages to move
+		- get end result of grid
+		- send back the result
 	- Build the rover
 
 
