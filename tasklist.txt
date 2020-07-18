@@ -1,0 +1,13 @@
+TaskList For Mars Rover
+-----------------------
+
+- Map out the goals
+	-	Describe flow
+	- Create sub-steps
+		- Figure out test cases
+
+- PreDelivery Checks
+	- ReadMe contains steps to install
+	- Try install from scratch and run
+		- MacOs
+		- Windows
