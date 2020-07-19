@@ -104,8 +104,8 @@ TaskList For Mars Rover
 
 -----
 - PreDelivery Checks
-	- Merge branches into master
+	+ Merge branches into master
 	+ ReadMe contains steps to install
 	- Try install from scratch and run
-		- MacOs
+		+ MacOs
 		- Windows

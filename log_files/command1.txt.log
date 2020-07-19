@@ -1,4 +1,4 @@
-INFO:root:Started Captain's Log on 2020-07-19 15:27:27.614384
+INFO:root:Started Captain's Log on 2020-07-19 15:54:57.242467
 INFO:root:Command File Valid ./command_files/command1.txt
 INFO:root:availability check for locations locx:1, locy:2 on the grid width: 5, length 8
 INFO:root:availability check for locations locx:3, locy:3 on the grid width: 5, length 8
@@ -24,6 +24,7 @@ INFO:root:I've got commands MMR
 INFO:root:availability check for locations locx:4, locy:3 on the grid width: 5, length 8
 INFO:root:availability check for locations locx:4, locy:3 on the grid width: 5, length 8
 INFO:root:availability check for locations locx:5, locy:3 on the grid width: 5, length 8
+WARNING:root:Collision detected for rover facing E at location 4, 3
 ERROR:root:command not valid exiting execution command: M
 INFO:root:I'm rover at 4, 0
 INFO:root:I've got commands RMLM
@@ -33,5 +34,15 @@ ERROR:root:command not valid exiting execution command: M
 INFO:root:I'm rover at 3, 0
 INFO:root:I've got commands M
 INFO:root:availability check for locations locx:4, locy:0 on the grid width: 5, length 8
+WARNING:root:Collision detected for rover facing E at location 3, 0
 ERROR:root:command not valid exiting execution command: M
+INFO:root:Final Grid 
+ [[0, 0, 0, E, N],
+ [0, 0, 0, 0, 0],
+ [S, 0, 0, 0, 0],
+ [0, 0, 0, 0, E],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0]]
 INFO:root:Finished

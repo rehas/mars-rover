@@ -9,11 +9,9 @@ from modules.satellite_link import SatelliteLink
 if "mars-rover" in os.listdir():
   os.chdir("mars-rover")
 
-print("Hello Mars Rover")
+print("Hello Mars Rover\n---\n")
 
 if __name__ == "__main__":
-  print("main")
-  print(sys.argv)
   FILE_NAME = "command1.txt"
   if sys.argv[1:]:
     FILE_NAME = sys.argv[1]
