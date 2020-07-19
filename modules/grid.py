@@ -2,7 +2,7 @@
   Grid Module
 '''
 # from modules.rover import Rover
-from pprint import pprint
+from pprint import pprint, pformat
 class Grid():
   def __init__(self, width: int, length: int):
     self.width = width
@@ -10,7 +10,7 @@ class Grid():
     self.grid = self.initialize_grid(width, length)
 
   def __repr__(self):
-    return str(self.grid)
+    return str(pformat(self.grid))
 
   def initialize_grid(self, wide: int, long: int):
     '''Initalizes empty grid with sizes'''

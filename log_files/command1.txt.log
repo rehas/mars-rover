@@ -1,0 +1,13 @@
+INFO:root:Started Captain's Log on 2020-07-19 13:15:10.692699
+INFO:root:Command File Valid ./command_files/command1.txt
+INFO:root:Command file parsed and grid initialized
+INFO:root:Initial Grid 
+ [[0, 0, 0, E, W],
+ [0, 0, 0, 0, 0],
+ [0, N, 0, 0, 0],
+ [0, 0, 0, E, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0]]
+INFO:root:Finished

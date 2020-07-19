@@ -13,6 +13,16 @@ A mars rover command flow simulation
 - For a different set of commands add commands file (.txt format) to command_files folder
 - Run `python app.py <new_command_file_name.txt>`
 
+### Windows
+- TBA
+
+### Tests
+- `python3 -m unittest tests.tests -v`
+
+### Captain's Logs
+- For every command file, there will be a logfile generated
+- These logs should reside under log_files
+
 #
 
 ## Explanation
