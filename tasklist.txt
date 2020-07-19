@@ -90,7 +90,7 @@ TaskList For Mars Rover
 		+ Caluclate next position
 		+ If available
 			+ Update position for rover
-	- Validate commandfile
+	+ Validate commandfile
 	- Return result as file
 	+ Test cases
 		+ Unit tests for functions

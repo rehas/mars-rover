@@ -1,0 +1,9 @@
+10 10
+1 2 N
+LML
+6 6 S
+MMR
+9 3 W
+RMLM
+3 0 E
+M
