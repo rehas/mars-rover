@@ -70,7 +70,7 @@ TaskList For Mars Rover
 		+ Grid class
 		+ init with sizes
 		+ display self 
-		- update with new locations of rovers on
+		+ update with new locations of rovers on
 		+ is desired location available
 	- Build the satellite_link
 		+ receive commands from file
@@ -80,8 +80,8 @@ TaskList For Mars Rover
 		+ initalize grid (empty)
 		+ place rovers on grid
 		+ send rovers messages to move
-		- get end result of grid
-		- send back the result
+		+ get end result of grid
+		+ send back the result
 	- Build the rover
 		+ initialize with location
 		+ send commands
@@ -103,9 +103,9 @@ TaskList For Mars Rover
 
 
 -----
-- PreDelivery Checks
++ PreDelivery Checks
 	+ Merge branches into master
 	+ ReadMe contains steps to install
-	- Try install from scratch and run
+	+ Try install from scratch and run
 		+ MacOs
-		- Windows
+		+ Windows
