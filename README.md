@@ -2,19 +2,22 @@
 A mars rover command flow simulation
 
 ## Dependencies
-- Python3.7 
+- [Python3.7](https://www.python.org/downloads/release/python-370/)
 
 ## Getting started
 
 ### MacOs
 
 - Clone repo
-- On root folder run `python3 app.py` for default commands
+- On root folder run `python3 app.py` for default commandset.
 - For a different set of commands add commands file (.txt format) to command_files folder
 - Run `python app.py <new_command_file_name.txt>`
 
 ### Windows
-- TBA
+- Clone repo
+- On root folder run `<your_python3_folder/python.exe> app.py` for default commandset.
+- For a different set of commands add commands file (.txt format) to command_files folder
+- Run `python app.py <new_command_file_name.txt>`
 
 ### Tests
 - `python3 -m unittest tests.tests -v`
@@ -26,6 +29,26 @@ A mars rover command flow simulation
 #
 
 ## Explanation
+
+	                                               XXXXXXXXXXXXXXXX
+	                                            XXX                XXXX
+	                      +-----------+        XX                      XX
+	                      | Satellite |       XX                         XX
+	                      +--+----+---+      XX                           XX
+	                         |    |         XX                      +----+ XX
+	                         |    |        XX                       |    |  XX
+	+------------+           |    |        XX                       |    |   XX
+	|  Houston   |           |    |        XX            Mars       |Rov2|    X 
+	+------------+           |    |        XX                       |    |    X
+	                       +-+----+--+     XX                       |    |   X
+	                       |         |     XX    +------------+     +----+  X
+	                       +---------+      XX   | Rover1     |           XX
+	                                        XX   +------------+          XX
+	                                          XXXX                   XXX
+	                                             XXXXXX          XXXXX
+	                                                  XXXXXXXXXXX
+
+
 ### FLOW
 
 - We want to send rovers to mars and we want to communicate our movement orders to the rovers
