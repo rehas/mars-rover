@@ -1,0 +1,54 @@
+INFO:root:Started Captain's Log on 2020-07-19 15:37:28.640386
+INFO:root:Command File Valid ./command_files/command2.txt
+INFO:root:availability check for locations locx:1, locy:2 on the grid width: 10, length 10
+INFO:root:availability check for locations locx:6, locy:6 on the grid width: 10, length 10
+INFO:root:availability check for locations locx:9, locy:3 on the grid width: 10, length 10
+INFO:root:availability check for locations locx:3, locy:0 on the grid width: 10, length 10
+INFO:root:Command file parsed and grid initialized
+INFO:root:Initial Grid 
+ [[0, 0, 0, E, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, N, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, W],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, S, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+INFO:root:I'm rover at 1, 2
+INFO:root:I've got commands LML
+INFO:root:availability check for locations locx:0, locy:2 on the grid width: 10, length 10
+INFO:root:availability check for locations locx:0, locy:2 on the grid width: 10, length 10
+INFO:root:Executed commands LML
+INFO:root:I'm rover at 6, 6
+INFO:root:I've got commands MMR
+INFO:root:availability check for locations locx:6, locy:7 on the grid width: 10, length 10
+INFO:root:availability check for locations locx:6, locy:7 on the grid width: 10, length 10
+INFO:root:availability check for locations locx:6, locy:8 on the grid width: 10, length 10
+INFO:root:availability check for locations locx:6, locy:8 on the grid width: 10, length 10
+INFO:root:Executed commands MMR
+INFO:root:I'm rover at 9, 3
+INFO:root:I've got commands RMLM
+INFO:root:availability check for locations locx:9, locy:2 on the grid width: 10, length 10
+INFO:root:availability check for locations locx:9, locy:2 on the grid width: 10, length 10
+INFO:root:availability check for locations locx:8, locy:2 on the grid width: 10, length 10
+INFO:root:availability check for locations locx:8, locy:2 on the grid width: 10, length 10
+INFO:root:Executed commands RMLM
+INFO:root:I'm rover at 3, 0
+INFO:root:I've got commands M
+INFO:root:availability check for locations locx:4, locy:0 on the grid width: 10, length 10
+INFO:root:availability check for locations locx:4, locy:0 on the grid width: 10, length 10
+INFO:root:Executed commands M
+INFO:root:Final Grid 
+ [[0, 0, 0, 0, E, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [S, 0, 0, 0, 0, 0, 0, 0, W, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, W, 0, 0, 0],
+ [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]]
+INFO:root:Finished
