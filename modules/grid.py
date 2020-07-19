@@ -20,11 +20,13 @@ class Grid():
     return arr
 
   def display(self):
+    '''Displays grid status'''
     pprint(self.grid)
 
   def update_location(self, rover, old_locx, old_locy):
-    self.grid[old_locy][old_locx] = 0
+    '''Moves rover to next position'''
     self.insert_rover(rover)
+    self.grid[old_locy][old_locx] = 0
 
   def insert_rover(self, rover):
     '''Inserts rovers into the grid'''

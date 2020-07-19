@@ -1,23 +1,25 @@
 # !/usr/local/bin/python3
-
+'''Unit Tests for Modules'''
 # Unit Tests
 import unittest
 from modules.grid import Grid
 from modules.rover import Rover
-from modules.satellite_link import SatelliteLink
 
 
 class TestGridMethods(unittest.TestCase):
   '''Grid Tests'''
   def test_grid_init_size1(self):
+    '''Test for grid init size'''
     test_grid = Grid(4, 5)
     self.assertEqual(len(test_grid.grid), 5)
 
   def test_grid_init_size2(self):
+    '''Test for grid init size'''
     test_grid = Grid(4, 5)
     self.assertEqual(len(test_grid.grid[0]), 4)
 
   def test_grid_placement(self):
+    '''Tests for grid rover placement'''
     test_grid = Grid(4, 5)
     test_rover = Rover(test_grid, 2, 3, "S")
     test_grid.insert_rover(test_rover)
@@ -26,6 +28,7 @@ class TestGridMethods(unittest.TestCase):
 class TestRoverMethods(unittest.TestCase):
   '''Rover Tests'''
   def test_rover_turns(self):
+    '''Rover rotation tests'''
     test_grid = Grid(5, 5)
     test_rover = Rover(test_grid, 2, 3, "N")
     test_grid.insert_rover(test_rover)
@@ -47,6 +50,7 @@ class TestRoverMethods(unittest.TestCase):
     self.assertEqual(test_rover.direction, "N")
 
   def test_rover_movement(self):
+    '''Test rover movement across grid'''
     test_grid = Grid(5, 5)
     test_rover = Rover(test_grid, 0, 0, "S")
     test_grid.insert_rover(test_rover)
@@ -55,12 +59,14 @@ class TestRoverMethods(unittest.TestCase):
     self.assertEqual((test_rover.locx, test_rover.locy), (4, 4))
 
   def test_rover_fall_prevension(self):
+    '''Tests fall detection for rover'''
     test_grid = Grid(3, 3)
     test_rover = Rover(test_grid, 0, 0, "N")
     test_grid.insert_rover(test_rover)
     self.assertFalse(test_rover.is_command_valid("M"))
 
   def test_rover_collision_prevension(self):
+    '''Tests Colliision detection'''
     test_grid = Grid(3, 3)
     test_rover1 = Rover(test_grid, 1, 1, "N")
     test_rover2 = Rover(test_grid, 1, 2, "N")
