@@ -91,10 +91,10 @@ TaskList For Mars Rover
 		+ If available
 			+ Update position for rover
 	+ Validate commandfile
-	HERE=> Log steps and results on logfile
-		- satellite_link
-		- grid
-		- rover
+	+ Log steps and results on logfile
+		+ satellite_link
+		+ grid
+		+ rover
 	+ Test cases
 		+ Unit tests for functions
 		+ Validation cases
@@ -105,7 +105,7 @@ TaskList For Mars Rover
 -----
 - PreDelivery Checks
 	- Merge branches into master
-	- ReadMe contains steps to install
+	+ ReadMe contains steps to install
 	- Try install from scratch and run
 		- MacOs
 		- Windows

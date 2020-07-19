@@ -2,8 +2,10 @@
   Grid Module
 '''
 # from modules.rover import Rover
+import logging
 from pprint import pprint, pformat
 class Grid():
+  '''Grid class, responsible for generating, displaying and updating grid information'''
   def __init__(self, width: int, length: int):
     self.width = width
     self.length = length
@@ -18,21 +20,25 @@ class Grid():
     return arr
 
   def display(self):
+    '''Displays grid status'''
     pprint(self.grid)
 
   def update_location(self, rover, old_locx, old_locy):
-    self.grid[old_locy][old_locx] = 0
+    '''Moves rover to next position'''
     self.insert_rover(rover)
-  
+    self.grid[old_locy][old_locx] = 0
+
   def insert_rover(self, rover):
+    '''Inserts rovers into the grid'''
     # Assumes initial locations are valid
     if self.is_location_available(rover.locx, rover.locy):
       self.grid[rover.locy][rover.locx] = rover
     else:
-      # TODO:# log or throw exception
+      logging.error("Rover insertion failed for : %s , %s", rover.locx, rover.locy)
       raise Exception(f"Rover insertion failed for : {rover.locx},{rover.locy}")
 
   def is_location_available(self, locx: int, locy: int):
-    # print(f"availability checking locations locx:{locx} , locy:{locy} ")
-    # print(f" width: {self.width} , length {self.length}")
+    '''Check if the location is occupied and within limits of the grids'''
+    logging.info("availability check for locations locx:%s, locy:%s \
+on the grid width: %s, length %s", locx, locy, self.width, self.length)
     return locx < self.width and locy < self.length and not self.grid[locy][locx]
