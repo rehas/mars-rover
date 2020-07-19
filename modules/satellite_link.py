@@ -68,6 +68,8 @@ class SatelliteLink():
       rov, com = rov_com
       rov.get_commands(com)
       rov.execute_commands()
+    logging.info("Final Grid \n %s", self.grid)
+
 
   def send_status(self):
     '''Returns the current status of the grid'''
