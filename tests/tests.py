@@ -2,9 +2,13 @@
 '''Unit Tests for Modules'''
 # Unit Tests
 import unittest
+import os
+
 from modules.grid import Grid
 from modules.rover import Rover
 
+if "mars-rover" in os.listdir():
+  os.chdir("mars-rover")
 
 class TestGridMethods(unittest.TestCase):
   '''Grid Tests'''
