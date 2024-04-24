@@ -12,6 +12,8 @@ A mars rover command flow simulation
 - On root folder run `python3 app.py` for default commandset.
 - For a different set of commands add commands file (.txt format) to command_files folder
 - Run `python app.py <new_command_file_name.txt>`
+- Example:
+	- `python3 app.py command1.txt`
 
 ### Windows
 - Clone repo
@@ -25,6 +27,14 @@ A mars rover command flow simulation
 ### Captain's Logs
 - For every command file, there will be a logfile generated
 - These logs should reside under log_files
+
+### Commandfile Format
+- First line represents grid size ex: `5 6`
+- Second line represents initial position of the first rover ex: `1 2 N`
+	- meaning Rover is at 1st column 2nd row facing North.
+- Third line represents a command to the first rover ex: `LML`
+	- meaning turn Left, Move, turn Left
+- Rest of the lines alternate between positions and commands for the rest of the rovers. 
 
 #
 

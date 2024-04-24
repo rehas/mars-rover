@@ -1,4 +1,4 @@
-INFO:root:Started Captain's Log on 2020-07-19 15:54:57.242467
+INFO:root:Started Captain's Log on 2024-04-24 18:42:16.292343
 INFO:root:Command File Valid ./command_files/command1.txt
 INFO:root:availability check for locations locx:1, locy:2 on the grid width: 5, length 8
 INFO:root:availability check for locations locx:3, locy:3 on the grid width: 5, length 8
